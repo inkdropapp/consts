@@ -15,6 +15,7 @@ module.exports = {
     BASIC: 'basic'
   },
   sessionStatus: {
+    ACTIVE: 'active',
     NOT_LOGGED_IN: 'notLoggedIn',
     UNAUTHORIZED: 'unauthorized',
     TRIAL_EXPIRED: 'trialExpired',
