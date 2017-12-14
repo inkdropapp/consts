@@ -4,13 +4,18 @@
   "description": "Constants for Inkdrop",
   "main": "index.js",
   "scripts": {
-    "test": "eslint index.js",
-    "prepublish": "npm run test"
+    "build": "babel index.es6.js -o index.js",
+    "test": "eslint index.es6.js",
+    "prepublish": "npm run test; npm run build"
   },
   "keywords": [],
   "author": "Takuya Matsuyama <t@inkdrop.info>",
   "license": "UNLICENSED",
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.3",
+    "babel-preset-env": "^1.6.1",
     "eslint": "^4.13.1",
     "standard": "^10.0.3"
   }
