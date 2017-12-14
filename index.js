@@ -14,6 +14,12 @@ module.exports = {
     TRIAL: 'trial',
     BASIC: 'basic'
   },
+  planType: {
+    basicMonthly: 'basic_usd_m',
+    basicYearly: 'basic_usd_y',
+    basicMonthlyJPY: 'basic_m',
+    basicYearlyJPY: 'basic_y'
+  },
   sessionStatus: {
     ACTIVE: 'active',
     NOT_LOGGED_IN: 'notLoggedIn',
