@@ -1,6 +1,7 @@
 export const appName = 'Inkdrop'
 export const contactMaddr = 'contact@inkdrop.info'
 export const webUrl = 'https://www.inkdrop.info/'
+export const appUrl = 'https://app.inkdrop.info/'
 export const docUrl = 'http://doc.inkdrop.info/'
 export const forumUrl = 'https://forum.inkdrop.info/'
 export const creditsUrl = 'https://github.com/inkdropapp/licenses/blob/master/README.md'
