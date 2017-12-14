@@ -1,0 +1,17 @@
+{
+  "name": "@craftzdog/inkdrop-consts",
+  "version": "1.0.0",
+  "description": "Constants for Inkdrop",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint index.js",
+    "prepublish": "npm run test"
+  },
+  "keywords": [],
+  "author": "Takuya Matsuyama <t@inkdrop.info>",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "eslint": "^4.13.1",
+    "standard": "^10.0.3"
+  }
+}

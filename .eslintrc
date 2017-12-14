@@ -1,0 +1,12 @@
+{
+  "root": true,
+  "extends": [ "standard" ],
+  "plugins": [],
+  "env": {
+    "node": true
+  },
+  "globals": {
+  },
+  "rules": {
+  }
+}
