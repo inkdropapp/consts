@@ -1,6 +1,6 @@
 {
   "name": "@craftzdog/inkdrop-consts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Constants for Inkdrop",
   "main": "index.js",
   "scripts": {
