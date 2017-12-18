@@ -4,8 +4,8 @@
   "description": "Constants for Inkdrop",
   "main": "index.js",
   "scripts": {
-    "build": "babel index.es6.js -o index.js",
-    "test": "eslint index.es6.js",
+    "build": "babel index.js.flow -o index.js",
+    "test": "eslint index.js.flow",
     "prepublish": "npm run test; npm run build"
   },
   "keywords": [],

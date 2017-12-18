@@ -8,9 +8,9 @@ export const forumUrl: string = 'https://forum.inkdrop.info/'
 export const creditsUrl: string = 'https://github.com/inkdropapp/licenses/blob/master/README.md'
 export type AccountStatus = 'active' | 'deactivated' | 'deleted'
 export type AccountStatusConstType = {
-  ACTIVE: string,
-  DEACTIVATED: string,
-  DELETED: string
+  ACTIVE: AccountStatus,
+  DEACTIVATED: AccountStatus,
+  DELETED: AccountStatus
 }
 export const accountStatus: AccountStatusConstType = {
   ACTIVE: 'active',
@@ -19,8 +19,8 @@ export const accountStatus: AccountStatusConstType = {
 }
 export type AccountType = 'trial' | 'basic'
 export type AccountTypeConstType = {
-  TRIAL: string,
-  BASIC: string
+  TRIAL: AccountType,
+  BASIC: AccountType
 }
 export const accountType: AccountTypeConstType = {
   TRIAL: 'trial',
@@ -28,10 +28,10 @@ export const accountType: AccountTypeConstType = {
 }
 export type PlanType = 'basic_usd_m' | 'basic_usd_y' | 'basic_m' | 'basic_y'
 export type PlanTypeConstType = {
-  basicMonthly: string,
-  basicYearly: string,
-  basicMonthlyJPY: string,
-  basicYearlyJPY: string
+  basicMonthly: PlanType,
+  basicYearly: PlanType,
+  basicMonthlyJPY: PlanType,
+  basicYearlyJPY: PlanType
 }
 export const planType: PlanTypeConstType = {
   basicMonthly: 'basic_usd_m',
@@ -41,12 +41,12 @@ export const planType: PlanTypeConstType = {
 }
 export type SessionStatus = 'active' | 'notLoggedIn' | 'unauthorized' | 'trialExpired' | 'sessionExpired' | 'oldVersion'
 export type SessionStatusConstType = {
-  ACTIVE: string,
-  NOT_LOGGED_IN: string,
-  UNAUTHORIZED: string,
-  TRIAL_EXPIRED: string,
-  SESSION_EXPIRED: string,
-  OLD_VERSION: string
+  ACTIVE: SessionStatus,
+  NOT_LOGGED_IN: SessionStatus,
+  UNAUTHORIZED: SessionStatus,
+  TRIAL_EXPIRED: SessionStatus,
+  SESSION_EXPIRED: SessionStatus,
+  OLD_VERSION: SessionStatus
 }
 export const sessionStatus: SessionStatusConstType = {
   ACTIVE: 'active',
@@ -68,7 +68,9 @@ export const noteShare = {
   PRIVATE: 'private',
   PUBLIC: 'public'
 }
-export const tagColors = [ 'default', 'red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue', 'violet', 'purple', 'pink', 'brown', 'grey', 'black' ]
-export const supportedImageFileTypes = [ 'image/png', 'image/jpeg', 'image/jpg', 'image/svg', 'image/gif' ]
-export const maxAttachmentFileSize = 10 * 1024 * 1024
-export const taxPercentage = 8
+export type TagColor = 'default' | 'red' | 'orange' | 'yellow' | 'olive' | 'green' | 'teal' | 'blue' | 'violet' | 'purple' | 'pink' | 'brown' | 'grey' | 'black'
+export const tagColors: TagColor[] = [ 'default', 'red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue', 'violet', 'purple', 'pink', 'brown', 'grey', 'black' ]
+export type ImageFileType = 'image/png' | 'image/jpeg' | 'image/jpg' | 'image/svg' | 'image/gif'
+export const supportedImageFileTypes: ImageFileType[] = [ 'image/png', 'image/jpeg', 'image/jpg', 'image/svg', 'image/gif' ]
+export const maxAttachmentFileSize: number = 10 * 1024 * 1024
+export const taxPercentage: number = 8
