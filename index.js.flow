@@ -56,7 +56,8 @@ export const sessionStatus: SessionStatusConstType = {
   SESSION_EXPIRED: 'sessionExpired',
   OLD_VERSION: 'oldVersion'
 }
-export const trashBookId: string = 'trash'
+export type TrashBookId = 'trash'
+export const trashBookId: TrashBookId = 'trash'
 export const noteStatus = {
   NONE: 'none',
   ACTIVE: 'active',
