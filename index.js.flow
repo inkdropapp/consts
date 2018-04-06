@@ -75,3 +75,16 @@ export type ImageFileType = 'image/png' | 'image/jpeg' | 'image/jpg' | 'image/sv
 export const supportedImageFileTypes: ImageFileType[] = [ 'image/png', 'image/jpeg', 'image/jpg', 'image/svg', 'image/gif' ]
 export const maxAttachmentFileSize: number = 10 * 1024 * 1024
 export const taxPercentage: number = 8
+
+export class AssistiveError extends Error {
+  detail: string
+  debugInfo: Object
+
+  constructor (opts: { message: string, detail: string, debugInfo: Object }) {
+    const { message, detail, debugInfo } = opts
+    super(message)
+    this.name = 'AssistiveError'
+    this.detail = detail
+    this.debugInfo = debugInfo
+  }
+}
