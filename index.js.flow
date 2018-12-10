@@ -1,10 +1,10 @@
 // @flow
 export const appName: string = 'Inkdrop'
-export const contactMaddr: string = 'contact@inkdrop.info'
-export const webUrl: string = 'https://www.inkdrop.info/'
-export const appUrl: string = 'https://app.inkdrop.info/'
-export const docUrl: string = 'http://doc.inkdrop.info/'
-export const forumUrl: string = 'https://forum.inkdrop.info/'
+export const contactMaddr: string = 'contact@inkdrop.app'
+export const webUrl: string = 'https://inkdrop.app/'
+export const appUrl: string = 'https://my.inkdrop.app/'
+export const docUrl: string = 'http://docs.inkdrop.app/'
+export const forumUrl: string = 'https://forum.inkdrop.app/'
 export const creditsUrl: string = 'https://github.com/inkdropapp/licenses/blob/master/README.md'
 export type AccountStatus = 'active' | 'deactivated' | 'deleted'
 export type AccountStatusConstType = {
