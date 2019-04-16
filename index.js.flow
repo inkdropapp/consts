@@ -7,34 +7,8 @@ export const docUrl: string = 'http://docs.inkdrop.app/'
 export const forumUrl: string = 'https://forum.inkdrop.app/'
 export const creditsUrl: string =
   'https://github.com/inkdropapp/licenses/blob/master/README.md'
-export type AccountStatus = 'active' | 'deactivated' | 'deleted'
-export type AccountStatusConstType = {
-  ACTIVE: AccountStatus,
-  DEACTIVATED: AccountStatus,
-  DELETED: AccountStatus
-}
-export const accountStatus: AccountStatusConstType = {
-  ACTIVE: 'active',
-  DEACTIVATED: 'deactivated',
-  DELETED: 'deleted'
-}
-export type AccountType = 'trial' | 'basic'
-export type AccountTypeConstType = {
-  TRIAL: AccountType,
-  BASIC: AccountType
-}
-export const accountType: AccountTypeConstType = {
-  TRIAL: 'trial',
-  BASIC: 'basic'
-}
 export type PlanType = 'basic_usd_m' | 'basic_usd_y' | 'basic_m' | 'basic_y'
-export type PlanTypeConstType = {
-  basicMonthly: PlanType,
-  basicYearly: PlanType,
-  basicMonthlyJPY: PlanType,
-  basicYearlyJPY: PlanType
-}
-export const planType: PlanTypeConstType = {
+export const planType: $ReadOnly<{ [string]: PlanType }> = {
   basicMonthly: 'basic_usd_m',
   basicYearly: 'basic_usd_y',
   basicMonthlyJPY: 'basic_m',
@@ -47,15 +21,7 @@ export type SessionStatus =
   | 'trialExpired'
   | 'sessionExpired'
   | 'oldVersion'
-export type SessionStatusConstType = {
-  ACTIVE: SessionStatus,
-  NOT_LOGGED_IN: SessionStatus,
-  UNAUTHORIZED: SessionStatus,
-  TRIAL_EXPIRED: SessionStatus,
-  SESSION_EXPIRED: SessionStatus,
-  OLD_VERSION: SessionStatus
-}
-export const sessionStatus: SessionStatusConstType = {
+export const sessionStatus: $ReadOnly<{ [string]: SessionStatus }> = {
   ACTIVE: 'active',
   NOT_LOGGED_IN: 'notLoggedIn',
   UNAUTHORIZED: 'unauthorized',
@@ -63,79 +29,7 @@ export const sessionStatus: SessionStatusConstType = {
   SESSION_EXPIRED: 'sessionExpired',
   OLD_VERSION: 'oldVersion'
 }
-export type TrashBookId = 'trash'
-export const trashBookId: TrashBookId = 'trash'
-export const noteStatus = {
-  NONE: 'none',
-  ACTIVE: 'active',
-  ON_HOLD: 'onHold',
-  COMPLETED: 'completed',
-  DROPPED: 'dropped'
-}
-export const noteShare = {
-  PRIVATE: 'private',
-  PUBLIC: 'public'
-}
-export type TagColor =
-  | 'default'
-  | 'red'
-  | 'orange'
-  | 'yellow'
-  | 'olive'
-  | 'green'
-  | 'teal'
-  | 'blue'
-  | 'violet'
-  | 'purple'
-  | 'pink'
-  | 'brown'
-  | 'grey'
-  | 'black'
-export const tagColors: TagColor[] = [
-  'default',
-  'red',
-  'orange',
-  'yellow',
-  'olive',
-  'green',
-  'teal',
-  'blue',
-  'violet',
-  'purple',
-  'pink',
-  'brown',
-  'grey',
-  'black'
-]
 
-export type ImageFileType =
-  | 'image/png'
-  | 'image/jpeg'
-  | 'image/jpg'
-  | 'image/svg'
-  | 'image/gif'
-  | 'image/heic'
-  | 'image/heif'
-export const supportedImageFileTypes: ImageFileType[] = [
-  'image/png',
-  'image/jpeg',
-  'image/jpg',
-  'image/svg',
-  'image/gif',
-  'image/heic',
-  'image/heif'
-]
-export const SUPPORTED_IMAGE_MIME_TYPES: {
-  [string]: ImageFileType
-} = {
-  ...supportedImageFileTypes.reduce(
-    (hash, ft) => ({ ...hash, [ft.split('/')[1]]: ft }),
-    {}
-  ),
-  jpg: 'image/jpeg'
-}
-
-export const maxAttachmentFileSize: number = 10 * 1024 * 1024
 export const taxPercentage: number = 8
 
 export class AssistiveError extends Error {
