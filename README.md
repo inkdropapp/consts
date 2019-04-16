@@ -4,5 +4,5 @@ Constants for Inkdrop
 ## Install
 
 ```shell
-npm install @craftzdog/inkdrop-consts
+npm install inkdrop-consts
 ```
