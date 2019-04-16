@@ -5,7 +5,8 @@ export const webUrl: string = 'https://inkdrop.app/'
 export const appUrl: string = 'https://my.inkdrop.app/'
 export const docUrl: string = 'http://docs.inkdrop.app/'
 export const forumUrl: string = 'https://forum.inkdrop.app/'
-export const creditsUrl: string = 'https://github.com/inkdropapp/licenses/blob/master/README.md'
+export const creditsUrl: string =
+  'https://github.com/inkdropapp/licenses/blob/master/README.md'
 export type AccountStatus = 'active' | 'deactivated' | 'deleted'
 export type AccountStatusConstType = {
   ACTIVE: AccountStatus,
@@ -39,7 +40,13 @@ export const planType: PlanTypeConstType = {
   basicMonthlyJPY: 'basic_m',
   basicYearlyJPY: 'basic_y'
 }
-export type SessionStatus = 'active' | 'notLoggedIn' | 'unauthorized' | 'trialExpired' | 'sessionExpired' | 'oldVersion'
+export type SessionStatus =
+  | 'active'
+  | 'notLoggedIn'
+  | 'unauthorized'
+  | 'trialExpired'
+  | 'sessionExpired'
+  | 'oldVersion'
 export type SessionStatusConstType = {
   ACTIVE: SessionStatus,
   NOT_LOGGED_IN: SessionStatus,
@@ -69,10 +76,65 @@ export const noteShare = {
   PRIVATE: 'private',
   PUBLIC: 'public'
 }
-export type TagColor = 'default' | 'red' | 'orange' | 'yellow' | 'olive' | 'green' | 'teal' | 'blue' | 'violet' | 'purple' | 'pink' | 'brown' | 'grey' | 'black'
-export const tagColors: TagColor[] = [ 'default', 'red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue', 'violet', 'purple', 'pink', 'brown', 'grey', 'black' ]
-export type ImageFileType = 'image/png' | 'image/jpeg' | 'image/jpg' | 'image/svg' | 'image/gif'
-export const supportedImageFileTypes: ImageFileType[] = [ 'image/png', 'image/jpeg', 'image/jpg', 'image/svg', 'image/gif' ]
+export type TagColor =
+  | 'default'
+  | 'red'
+  | 'orange'
+  | 'yellow'
+  | 'olive'
+  | 'green'
+  | 'teal'
+  | 'blue'
+  | 'violet'
+  | 'purple'
+  | 'pink'
+  | 'brown'
+  | 'grey'
+  | 'black'
+export const tagColors: TagColor[] = [
+  'default',
+  'red',
+  'orange',
+  'yellow',
+  'olive',
+  'green',
+  'teal',
+  'blue',
+  'violet',
+  'purple',
+  'pink',
+  'brown',
+  'grey',
+  'black'
+]
+
+export type ImageFileType =
+  | 'image/png'
+  | 'image/jpeg'
+  | 'image/jpg'
+  | 'image/svg'
+  | 'image/gif'
+  | 'image/heic'
+  | 'image/heif'
+export const supportedImageFileTypes: ImageFileType[] = [
+  'image/png',
+  'image/jpeg',
+  'image/jpg',
+  'image/svg',
+  'image/gif',
+  'image/heic',
+  'image/heif'
+]
+export const SUPPORTED_IMAGE_MIME_TYPES: {
+  [string]: ImageFileType
+} = {
+  ...supportedImageFileTypes.reduce(
+    (hash, ft) => ({ ...hash, [ft.split('/')[1]]: ft }),
+    {}
+  ),
+  jpg: 'image/jpeg'
+}
+
 export const maxAttachmentFileSize: number = 10 * 1024 * 1024
 export const taxPercentage: number = 8
 
@@ -80,7 +142,7 @@ export class AssistiveError extends Error {
   detail: string
   debugInfo: Object
 
-  constructor (opts: { message: string, detail: string, debugInfo: Object }) {
+  constructor(opts: { message: string, detail: string, debugInfo: Object }) {
     const { message, detail, debugInfo } = opts
     super(message)
     this.name = 'AssistiveError'
