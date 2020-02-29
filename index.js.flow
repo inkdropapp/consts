@@ -1,7 +1,7 @@
 // @flow
 export const appName: string = 'Inkdrop'
 export const contactMaddr: string = 'contact@inkdrop.app'
-export const webUrl: string = 'https://inkdrop.app/'
+export const webUrl: string = 'https://www.inkdrop.app/'
 export const appUrl: string = 'https://my.inkdrop.app/'
 export const docUrl: string = 'http://docs.inkdrop.app/'
 export const forumUrl: string = 'https://forum.inkdrop.app/'
