@@ -9,7 +9,7 @@
   "scripts": {
     "build": "rollup -c",
     "lint": "eslint src",
-    "prepublishOnly": "npm-run-all build lint"
+    "prepublishOnly": "npm run lint && npm run build"
   },
   "keywords": [],
   "author": "Takuya Matsuyama <t@inkdrop.info>",
