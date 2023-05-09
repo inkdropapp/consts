@@ -1,5 +1,4 @@
-Constants for Inkdrop
-======================
+# Public constants for Inkdrop
 
 ## Install
 
