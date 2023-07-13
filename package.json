@@ -1,6 +1,6 @@
 {
   "name": "inkdrop-consts",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Public constants for Inkdrop",
   "types": "lib/index.d.ts",
   "main": "lib/index.umd.js",
