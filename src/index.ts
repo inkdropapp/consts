@@ -7,28 +7,6 @@ export const apiDocUrl = 'https://developers.inkdrop.app/'
 export const forumUrl = 'https://forum.inkdrop.app/'
 export const creditsUrl =
   'https://github.com/inkdropapp/licenses/blob/master/README.md'
-export type PlanType =
-  | 'price_1OeSaiInMe8AqGVyl8iQYm2g'
-  | 'price_1OeSaiInMe8AqGVyUSceItui'
-  | 'basic_usd_m'
-  | 'basic_usd_y'
-  | 'basic_m'
-  | 'basic_y'
-export const planType: {
-  basicMonthly: 'price_1OeSaiInMe8AqGVyl8iQYm2g'
-  basicYearly: 'price_1OeSaiInMe8AqGVyUSceItui'
-  old_basicMonthly: 'basic_usd_m'
-  old_basicYearly: 'basic_usd_y'
-  old_basicMonthlyJPY: 'basic_m'
-  old_basicYearlyJPY: 'basic_y'
-} = {
-  basicMonthly: 'price_1OeSaiInMe8AqGVyl8iQYm2g',
-  basicYearly: 'price_1OeSaiInMe8AqGVyUSceItui',
-  old_basicMonthly: 'basic_usd_m',
-  old_basicYearly: 'basic_usd_y',
-  old_basicMonthlyJPY: 'basic_m',
-  old_basicYearlyJPY: 'basic_y'
-}
 export const trialPeriod = 14
 export type SessionStatus =
   | 'active'
