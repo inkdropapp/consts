@@ -31,7 +31,6 @@ export const sessionStatus: {
   SESSION_EXPIRED: 'sessionExpired',
   OLD_VERSION: 'oldVersion'
 }
-export const taxPercentage = 8
 export class AssistiveError extends Error {
   detail: string
   debugInfo: Record<string, any>
