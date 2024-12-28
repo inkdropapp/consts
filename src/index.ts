@@ -8,7 +8,7 @@ export const forumUrl = 'https://forum.inkdrop.app/'
 export const creditsUrl =
   'https://github.com/inkdropapp/licenses/blob/master/README.md'
 export const testimonialFormUrl = 'https://api.inkdrop.app/v1/r/testimonial'
-export const trialPeriod = 14
+export const trialPeriod = 30
 export type SessionStatus =
   | 'active'
   | 'notLoggedIn'
