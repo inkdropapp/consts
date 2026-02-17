@@ -31,6 +31,23 @@ export const sessionStatus: {
   SESSION_EXPIRED: 'sessionExpired',
   OLD_VERSION: 'oldVersion'
 }
+export type ClientType = 'mobile' | 'desktop'
+export const CLIENT_TYPE: {
+  readonly MOBILE: 'mobile'
+  readonly DESKTOP: 'desktop'
+} = {
+  MOBILE: 'mobile',
+  DESKTOP: 'desktop'
+}
+export type ClientInfo = {
+  /** Random nanoid string */
+  clientId: string
+  clientType: ClientType
+  /** process.platform */
+  clientName: string
+  /** app.getVersion() */
+  clientVersion: string
+}
 export class AssistiveError extends Error {
   detail: string
   debugInfo: Record<string, any>
