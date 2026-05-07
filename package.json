@@ -9,21 +9,22 @@
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
     "lint": "eslint src",
+    "format": "prettier --write src",
     "prepublishOnly": "npm run lint && npm run build"
   },
   "keywords": [],
   "author": "Takuya Matsuyama <t@inkdrop.app>",
   "license": "UNLICENSED",
   "devDependencies": {
-    "@eslint/js": "^10.0.0",
-    "@rollup/plugin-terser": "^0.4.4",
-    "eslint": "^10.0.0",
+    "@eslint/js": "^10.0.1",
+    "@rollup/plugin-terser": "^1.0.0",
+    "eslint": "^10.3.0",
     "eslint-config-prettier": "^10.1.8",
-    "typescript-eslint": "^8.26.0",
-    "prettier": "^3.8.1",
-    "rollup": "^4.57.1",
-    "rollup-plugin-typescript2": "^0.36.0",
-    "typescript": "^5.9.3"
+    "prettier": "^3.8.3",
+    "rollup": "^4.60.3",
+    "rollup-plugin-typescript2": "^0.37.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.2"
   },
   "files": [
     "lib"
