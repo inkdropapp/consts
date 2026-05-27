@@ -50,12 +50,12 @@ export type ClientInfo = {
 }
 export class AssistiveError extends Error {
   detail: string
-  debugInfo: Record<string, any>
+  debugInfo?: Record<string, any>
 
   constructor(opts: {
     message: string
     detail: string
-    debugInfo: Record<string, any>
+    debugInfo?: Record<string, any>
     cause?: Error
   }) {
     const { message, detail, debugInfo, cause } = opts
