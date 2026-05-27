@@ -56,9 +56,10 @@ export class AssistiveError extends Error {
     message: string
     detail: string
     debugInfo: Record<string, any>
+    cause?: Error
   }) {
-    const { message, detail, debugInfo } = opts
-    super(message)
+    const { message, detail, debugInfo, cause } = opts
+    super(message, { cause })
     this.name = 'AssistiveError'
     this.detail = detail
     this.debugInfo = debugInfo
